@@ -13,9 +13,18 @@ let pets = [
 ]
 
 module.exports = {
-  async find() {
-    // SELECT * FROM "Pet"
-    return pets
+  async find(search) {
+    // SELECT * FROM "Pet" WHERE type = 'fish';
+    let resultSet = [...pets]
+    if (search.type) {
+      resultSet = resultSet.filter(pet => pet.type === search.type)
+    }
+    if (search.adopted === 'true') {
+      resultSet = resultSet.filter(pet => pet.adopted === true)
+    } else {
+      resultSet = resultSet.filter(pet => pet.adopted === false)
+    }
+    return resultSet
   },
 
   async findById(id) {

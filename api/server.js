@@ -23,8 +23,8 @@ server.get('/api/pets', async (req, res, next) => {
 })
 
 // [CATCH-ALL]
-server.use('*', (req, res, next) => {
-  next({ status: 404 })
+server.use('/*', (req, res, next) => {
+  next({ status: 404, message: 'Not Found' })
 })
 
 // Error handling middleware
