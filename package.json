@@ -1,0 +1,10 @@
+{
+  "name": "node-express-starter",
+  "version": "0.0.1",
+  "author": "gabriel@cabrejas.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codepath/node-express-starter.git"
+  },
+  "license": "MIT"
+}
