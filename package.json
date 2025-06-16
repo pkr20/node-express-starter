@@ -6,13 +6,5 @@
     "type": "git",
     "url": "https://github.com/codepath/node-express-starter.git"
   },
-  "license": "MIT",
-  "scripts": {
-    "dev": "node --watch index.js",
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.2"
-  }
+  "license": "MIT"
 }
