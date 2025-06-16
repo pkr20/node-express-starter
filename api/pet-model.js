@@ -21,7 +21,7 @@ module.exports = {
     }
     if (search.adopted === 'true') {
       resultSet = resultSet.filter(pet => pet.adopted === true)
-    } else {
+    } else if (search.adopted === 'false') {
       resultSet = resultSet.filter(pet => pet.adopted === false)
     }
     return resultSet

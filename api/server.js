@@ -9,6 +9,11 @@ server.use(cors())
 // [GET] /api/pets
 server.get('/api/pets', async (req, res, next) => {
   const search = req.query
+  const params = req.params
+  const method = req.method
+  const rawHeaders = req.rawHeaders
+  const body = req.body
+  
   try {
     // The details about how the pets are pulled from the DB are abstracted away
     const pets = await Pet.find(search)
